@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en, ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Поиск информации в интернете: веб страницы, картинки, видео и многое другое.">
+  <meta name="keywords" content="поиск, вебсерфинг, search">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>Google</title>
+  <link rel="shortcut icon" href="./img/google_icon.ico" type="image/x-icon">
+  <link href="./style/style.css" rel="stylesheet">
+</head>
+
+<header class="wrapper--desktop header--desktop">
+  <nav class="main-nav">
+    <div class="main-nav__content">
+      <div class="main-nav__links">
+        <a class="main-nav__links__item" href="https://www.google.com/intl/ru/gmail/about/#">Почта</a>
+        <a class="main-nav__links__item" href="https://www.google.ru/imghp?hl=ru&tab=wi&ogbl">Картинки</a>
+      </div>
+      <button class="main-nav__content--applications" type="button" title="Приложения Google">
+        <img class="application-icon" src="/img/icons/header_btn_icon.svg" alt="">
+      </button>
+    </div>
+    <button class="log-in-btn" type="button">
+      <a class="log-in-btn__link" href="https://accounts.google.com/signin/v2/identifier?hl=ru&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank">Войти</a>
+
+    </button>
+  </nav>
+</header>
+
+<main class="wrapper--desktop main-content">
+  <div class="logo">
+    <img class="logo--main" src="/img/google_title.svg" alt="Google">
+  </div>
+    <form class="search" action="/search" method="GET" role="search">
+      <div class="search__container">
+        <input type="text" class="search__field" title="Поиск" aria-label="Найти">
+        <button class="search__keyboard-btn" type="button" aria-label="Экранная клавиатура"></button>
+        <button class="search__voice-btn" type="button" aria-label="Голосовой поиск"></button>
+      </div>
+      <div class="search__buttons">
+        <button class="search__btn search__btn--submit" type="submit" name="main-search" aria-label="Поиск в Google">Поиск в Google</button>
+        <button class="search__btn search__btn--random" type="submit" name="random-search" aria-label="Мне повезёт!">Мне повезёт!</button>
+      </div>
+      </form>
+  </div>
+</main>
+
+<footer class="footer--desktop">
+  <div class="wrapper--desktop footer-content footer-content__copyright">Россия</div>
+  <div class="wrapper--desktop footer-content footer-content__menu">
+    <ul class="footer-content__menu--advertising">
+      <li class="footer-content__menu-item">
+        <a class="footer-content__menu-link" href="https://ads.google.com/intl/ru_ru/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Реклама</a>
+      </li>
+      <li class="footer-content__menu-item">
+        <a class="footer-content__menu-link"
+          href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1#?modal_active=none">Для бизнеса</a>
+      </li>
+      <li class="footer-content__menu-item">
+        <a class="footer-content__menu-link"
+          href="https://about.google/?utm_source=google-RU&utm_medium=referral&utm_campaign=hp-footer&fg=1">Всё о Google</a>
+      </li>
+      <li class="footer-content__menu-item">
+        <a class="footer-content__menu-link"
+          href="https://www.google.com/search/howsearchworks/?fg=1">Как работает Google Поиск</a>
+      </li>
+    </ul>
+
+    <ul class="footer-content__menu--conditions">
+      <li class="footer-content__menu-item">
+        <a class="footer-content__menu-link"
+          href="https://policies.google.com/privacy?hl=ru&fg=1">Конфиденциальность</a>
+      </li>
+      <li class="footer-content__menu-item">
+        <a class="footer-content__menu-link"
+          href="https://policies.google.com/terms?hl=ru&fg=1">Условия</a>
+      </li>
+      <li class="footer-content__menu-item">
+        <button class="footer-content__menu-settings" type="button">Настройки</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="menu-settings" role="menu">
+    <a href="https://www.google.com/preferences?hl=ru&fg=1" role="menuitem">Настройки поиска</a>
+    <a href="https://www.google.com/advanced_search?hl=ru&fg=1" role="menuitem">Расширенный поиск</a>
+    <a href="https://www.google.com/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1" role="menuitem">Ваши данные в Поиске</a>
+    <a href="https://www.google.com/history/optout?hl=ru&fg=1" role="menuitem">Действия в Поиске</a>
+    <a href="https://support.google.com/websearch/?p=ws_results_help&hl=ru&fg=1" role="menuitem">Поиск в
+      справке</a>
+    <a href="http://letters.kremlin.ru/" role="menuitem" target="_blank">Отправить отзыв</a>
+  </div>
+
+</footer>
+
+  <script src="#"></script>
+
+</body>
+
+</html>
