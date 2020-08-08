@@ -29,6 +29,7 @@
 
   &__content {
     display: flex;
+    position: relative;
     margin: 0 15px;
 
     &--applications {
@@ -51,12 +52,84 @@
   }
 }
 
+.menu-applications {
+  position: absolute;
+  top: 60px;
+  width: 300px;
+  padding: 30px;
+  border: $footer-border;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.30), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+  max-height: 100%;
+
+  &.hide {
+    visibility: hidden;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  &__item {
+    list-style: none;
+    text-align: center;
+    padding-bottom: 10px;
+
+    &:hover {
+      border-radius: 8px;
+      background-color: #f6fafe;
+    }
+
+    &--link {
+    font-size: 14px;
+    color: #202124;
+    letter-spacing: 0.09px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+  }
+}
+
+.application__img {
+  width: 100%;
+  height: 64px;
+  padding-top: 15px;
+  background: url('/img/Icons_Sprite.png') no-repeat;
+  background-position-x: 50%;
+  background-size: 80%;
+
+  &--account {
+    background-position-y: -1768px;
+  }
+  &--search {
+    background-position-y: -1324px;
+  }
+  &--maps {
+    background-position-y: -1578px;
+  }
+  &--youtube {
+    background-position-y: -2400px;
+  }
+  &--play {
+    background-position-y: -819px;
+  }
+  &--news {
+    background-position-y: -1641px;
+  }
+}
+
 .log-in-btn {
   height: 30px;
   padding: 0 0;
   border: $border-log-in-btn;
   border-radius: 2px;
   background-image: $log-in-btn-bg;
+
+  &:focus {
+    outline: none;
+  }
 
   &__link {
     padding: 0 12px;
@@ -131,15 +204,15 @@
       outline: none;
     }
 
-      &--keyboard {
-        width: 40px;
-        background: url('/img/icons/kboard.png') no-repeat 50% 50%;
-      }
-      &--voice {
-        width: 24px;
-        margin: 0 16px 0 7px;
-        background: url('/img/icons/mic.svg') no-repeat 50% 50%;
-      }
+    &--keyboard {
+      width: 40px;
+      background: url('/img/icons/kboard.png') no-repeat 50% 50%;
+    }
+    &--voice {
+      width: 24px;
+      margin: 0 16px 0 7px;
+      background: url('/img/icons/mic.svg') no-repeat 50% 50%;
+    }
   }
 
   &__buttons {
@@ -235,7 +308,6 @@
         outline: none;
       }
     }
-
   }
 }
 
