@@ -1,5 +1,9 @@
 @import '_global.scss';
 
+body {
+  height: 100%;
+}
+
 .header--desktop {
   display: flex;
   flex: 0 1 auto;
@@ -146,6 +150,7 @@
   justify-content: center;
   align-items: center;
   height: -webkit-calc(100vh - 270px);
+  height: -moz-calc(100vh - 270px);
   min-height: 300px;
   margin-top: 110px;
   margin-bottom: 30px;
@@ -289,9 +294,17 @@
       }
     }
 
-    &-link, a:-webkit-any-link {
+    &-link,
+    a:-webkit-any-link {
       color: $footer-color;
     }
+    &-link:link {
+      color: $footer-color;
+    }
+    &-link:visited {
+      color: $footer-color;
+    }
+
 
     &-settings {
       padding: 0;

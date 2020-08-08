@@ -65,6 +65,10 @@ h2, .head2 {
   }
 }
 
+body {
+  height: 100%;
+}
+
 .header--desktop {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,7 +247,7 @@ h2, .head2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: -webkit-calc(100vh - 270px);
+  height: -moz-calc(100vh - 270px);
   min-height: 300px;
   margin-top: 110px;
   margin-bottom: 30px;
@@ -408,7 +412,16 @@ h2, .head2 {
   position: relative;
 }
 
-.footer-content__menu-link, .footer-content__menu a:-webkit-any-link {
+.footer-content__menu-link,
+.footer-content__menu a:-webkit-any-link {
+  color: #5F6368;
+}
+
+.footer-content__menu-link:link {
+  color: #5F6368;
+}
+
+.footer-content__menu-link:visited {
   color: #5F6368;
 }
 
