@@ -34,11 +34,11 @@
     <img class="logo--main" src="/img/google_title.svg" alt="Google">
   </div>
     <form class="search" action="/search" method="GET" role="search">
-      <div class="search__container">
+      <label class="search__container">
         <input type="text" class="search__field" title="Поиск" aria-label="Найти">
-        <button class="search__keyboard-btn" type="button" aria-label="Экранная клавиатура"></button>
-        <button class="search__voice-btn" type="button" aria-label="Голосовой поиск"></button>
-      </div>
+        <button class="search__icon-btn search__icon-btn--keyboard" type="button" aria-label="Экранная клавиатура"></button>
+        <button class="search__icon-btn search__icon-btn--voice" type="button" aria-label="Голосовой поиск"></button>
+      </label>
       <div class="search__buttons">
         <button class="search__btn search__btn--submit" type="submit" name="main-search" aria-label="Поиск в Google">Поиск в Google</button>
         <button class="search__btn search__btn--random" type="submit" name="random-search" aria-label="Мне повезёт!">Мне повезёт!</button>
@@ -77,25 +77,25 @@
         <a class="footer-content__menu-link"
           href="https://policies.google.com/terms?hl=ru&fg=1">Условия</a>
       </li>
-      <li class="footer-content__menu-item">
+      <li class="footer-content__menu-item footer-content__menu-item--settings">
         <button class="footer-content__menu-settings" type="button">Настройки</button>
+        <div class="menu-settings hide" role="menu">
+          <a class="menu-settings--item" href="https://www.google.com/preferences?hl=ru&fg=1" role="menuitem">Настройки поиска</a>
+          <a class="menu-settings--item" href="https://www.google.com/advanced_search?hl=ru&fg=1" role="menuitem">Расширенный поиск</a>
+          <a class="menu-settings--item" href="https://www.google.com/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1" role="menuitem">Ваши
+            данные в Поиске</a>
+          <a class="menu-settings--item" href="https://www.google.com/history/optout?hl=ru&fg=1" role="menuitem">Действия в Поиске</a>
+          <a class="menu-settings--item" href="https://support.google.com/websearch/?p=ws_results_help&hl=ru&fg=1" role="menuitem">Поиск в
+            справке</a>
+          <a class="menu-settings--item" href="http://letters.kremlin.ru/" role="menuitem" target="_blank">Отправить отзыв</a>
+        </div>
       </li>
     </ul>
   </div>
 
-  <div class="menu-settings" role="menu">
-    <a href="https://www.google.com/preferences?hl=ru&fg=1" role="menuitem">Настройки поиска</a>
-    <a href="https://www.google.com/advanced_search?hl=ru&fg=1" role="menuitem">Расширенный поиск</a>
-    <a href="https://www.google.com/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1" role="menuitem">Ваши данные в Поиске</a>
-    <a href="https://www.google.com/history/optout?hl=ru&fg=1" role="menuitem">Действия в Поиске</a>
-    <a href="https://support.google.com/websearch/?p=ws_results_help&hl=ru&fg=1" role="menuitem">Поиск в
-      справке</a>
-    <a href="http://letters.kremlin.ru/" role="menuitem" target="_blank">Отправить отзыв</a>
-  </div>
-
 </footer>
 
-  <script src="#"></script>
+  <script src="script.js"></script>
 
 </body>
 

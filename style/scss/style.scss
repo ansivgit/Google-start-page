@@ -2,6 +2,7 @@
 
 .header--desktop {
   display: flex;
+  flex: 0 1 auto;
   justify-content: flex-end;
   margin-top: 17px;
 }
@@ -18,7 +19,6 @@
       margin-left: 15px;
       font-size: 13px;
       color: $header-color-links;
-      //outline: 1px solid red;
 
       &:hover {
         text-decoration: underline;
@@ -39,14 +39,16 @@
       background-color: transparent;
       opacity: 0.55;
       cursor: pointer;
-      //outline: 1px solid blue;
 
       &:hover {
         opacity: 1;
       }
+
+      &:focus {
+        outline: none;
+      }
     }
   }
-
 }
 
 .log-in-btn {
@@ -66,10 +68,14 @@
 
 .main-content {
   display: flex;
+  flex: 10 1 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: -webkit-calc(100vh - 270px);
+  min-height: 300px;
   margin-top: 110px;
+  margin-bottom: 30px;
 }
 
 .logo--main {
@@ -79,7 +85,8 @@
 .search {
   &__container {
   display: flex;
-  width: 582px;
+  position: relative;
+  width: 535px;
   margin-top: 25px;
   padding-left: 47px;
   border: $input-field;
@@ -89,14 +96,50 @@
       border: $input-field-hover;
       box-shadow: $input-field-shadow;
     }
+
+    &::before {
+      content: url('/img/icons/focus.svg');
+      position: absolute;
+      z-index: 10;
+      width: 20px;
+      height: 20px;
+      left: 14px;
+      top: 13px;
+    }
   }
 
   &__field {
+    flex: 1 1 auto;
+    max-width: 100%;
     margin: 5px 0;
     padding: 8px 0;
     border: none;
     font-size: 16px;
     color: $input-text-color;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon-btn {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+      &--keyboard {
+        width: 40px;
+        background: url('/img/icons/kboard.png') no-repeat 50% 50%;
+      }
+      &--voice {
+        width: 24px;
+        margin: 0 16px 0 7px;
+        background: url('/img/icons/mic.svg') no-repeat 50% 50%;
+      }
   }
 
   &__buttons {
@@ -104,7 +147,7 @@
     justify-content: center;
     margin-top: 18px;
     padding: 11px;
-    margin-right: 10px;
+    margin-right: 12px;
   }
 
   &__btn {
@@ -127,6 +170,7 @@
 }
 
 .footer--desktop {
+  flex: 0 1 auto;
   background-color: $footer-bg;
 }
 
@@ -157,9 +201,18 @@
     &-item {
       margin: auto 27px auto 0;
       list-style: none;
+      cursor: pointer;
 
       &:last-child {
         margin-right: 0;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &--settings {
+        position: relative;
       }
     }
 
@@ -167,9 +220,50 @@
       color: $footer-color;
     }
 
+    &-settings {
+      padding: 0;
+      border: none;
+      font-size: 14px;
+      color: $footer-color;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
   }
 }
 
 .menu-settings {
-  display: none;
+  position: absolute;
+  bottom: 18px;
+  right: 0px;
+  border: 1px solid #999999;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+
+  &.hide {
+    visibility: hidden;
+  }
+
+  &--item {
+    display: block;
+    margin: 0 30px;
+    padding: 15px 0;
+    white-space: nowrap;
+    text-decoration: none;
+    color: $footer-color;
+
+    &:hover {
+      color: #333333;
+      text-decoration: underline;
+    }
+  }
 }
