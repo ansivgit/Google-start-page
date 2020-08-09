@@ -66,7 +66,14 @@ h2, .head2 {
 }
 
 body {
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 .header--desktop {
@@ -247,7 +254,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: -moz-calc(100vh - 270px);
   min-height: 300px;
   margin-top: 110px;
   margin-bottom: 30px;
